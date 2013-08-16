@@ -9,9 +9,7 @@
     <keywords>cordova,contacts,pick</keywords>
 
 
-    <js-module src="www/ContactPicker.js" name="ContactPickerUtil">
-        <clobbers target="navigator.ContactPickerUtil" />
-    </js-module>
+   
 
     <!-- android -->
     <platform name="android">
