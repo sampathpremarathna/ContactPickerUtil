@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="org.apache.cordova.core.contacts"
+      version="0.1.0">
+    <name>ContactPickerUtil</name>
+    <description>phonegap contact picker plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,contacts,pick</keywords>
+
+
+    <js-module src="www/ContactPicker.js" name="ContactPickerUtil">
+        <clobbers target="navigator.ContactPickerUtil" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+                <feature name="ContactPick">
+					<param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
+				</feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			        <activity android:name=".ContactResult" android:label="@string/app_name"/>
+		</config-file>
+
+        <source-file src="src/android/ContactPick.java" target-dir="src/com/mobitel/nalaka/piccon" />
+        <source-file src="src/android/ContactResult.java" target-dir="src/com/mobitel/nalaka/piccon" />
+    </platform>
+
+    <!-- ios -->
+    
+
+    <!-- wp7 -->
+    
+
+    <!-- wp8 -->
+    
+
+</plugin>
