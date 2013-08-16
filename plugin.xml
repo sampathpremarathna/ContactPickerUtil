@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="org.apache.cordova.core.contacts"
+           id="com.mobitel.nalaka.piccon"
       version="0.1.0">
     <name>ContactPickerUtil</name>
     <description>phonegap contact picker plugin</description>
@@ -17,8 +17,8 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
                 <feature name="ContactPick">
-					<param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
-				</feature>
+			<param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
+		</feature>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
