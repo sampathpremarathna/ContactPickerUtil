@@ -17,20 +17,20 @@
         
 		<config-file target="res/xml/config.xml" parent="/*">
                 <feature name="ContactPick">
-					<param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
-				</feature>
+		  <param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
+		</feature>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.READ_CONTACTS" />
         </config-file>
 		
-		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:name=".ContactResult" android:label="@string/app_name">
-				<intent-filter>
-				</intent-filter>
-			</activity>
-		</config-file>
+	<config-file target="AndroidManifest.xml" parent="/manifest/application">
+		<activity android:name=".ContactResult" android:label="@string/app_name">
+			<intent-filter>
+			</intent-filter>
+		</activity>
+	</config-file>
 		
         <source-file src="src/android/ContactPick.java" target-dir="src/com/mobitel/nalaka/piccon" />
         <source-file src="src/android/ContactResult.java" target-dir="src/com/mobitel/nalaka/piccon" />
