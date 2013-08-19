@@ -14,13 +14,20 @@ Adobe PhoneGap Build
 =====================
 
 Add the following to your config.xml
-
-<gap:plugin name="com.mobitel.nalaka.piccon.ContactPick">
-</gap:plugin>
+<pre>
+<code>
+&lt;gap:plugin name="com.mobitel.nalaka.piccon.ContactPick" &gt;
+&lt;/gap:plugin &gt;
+</code>
+</pre>
 
 Add the javascript scripts included in the plugin into your index.html
+<pre>
+<code>
+&lt;script src="ContactPicker.js"/ &gt;
 
-<script src="ContactPicker.js"></script>
+</code>
+</pre>
 
 
 Manual Android Installation
@@ -28,6 +35,8 @@ Manual Android Installation
 
 
 * Add the source file to the following structure
+
+<pre>
 
 |_Project
 |  |_assets
@@ -46,54 +55,70 @@ Manual Android Installation
 |//other files with standerd structure
 
 
+</pre>
+
 * and add the following to config.xml file
+<pre> 
+ <code>
+    &lt;feature name="ContactPick" &gt;
+        &lt; param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" / &gt;
+    &lt;/feature &gt;
+</code>
+</pre>
 
-    <feature name="ContactPick">
-        <param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
-    </feature>
+* and add the following to permission to AndroidManifest.xml file
+<pre> 
+ <code>
+    &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
+</code>
+</pre>
     
-* link the _ContactPicker.js to the html file
-  
-  <script src="ContactPicker.js"></script>
-
+* link the ContactPicker.js to the html file
+<pre> 
+ <code>
+  &lt;script src="ContactPicker.js" /&gt;
+</code>
+</pre>
 
 USAGE
 =======
 
 example :
+<code>
+<pre>
 
-
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="ContactPicker.js"></script>
+&lt;html&gt;
+    &lt;head>
+        &lt;meta charset="utf-8" /&gt;
+        &lt;script type="text/javascript" src="cordova.js"/ &gt;
+        &lt;script type="text/javascript" src="ContactPicker.js"/ &gt;
         
-        <script type="text/javascript">
+        &lt;script type="text/javascript" &gt;
+           
             function pickAContact(){
                 window.contactPickerUtil(function(data) {
                     alert("picked contact is :"+data.number+" - "+data.name);
                 });
             }
 
-        </script>
-    </head>
-    <body>
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
 
         
 
 
-    <div >
-        <input id="aa" type="text" />
+    &lt;div &gt;
 
-        <button type="button"  onclick="pickAContact()">Click To Pick</button>
+        &lt; button type="button"  onclick="pickAContact()" &gt; Click To Pick &lt;/button&gt;
 
-    </div>
+    &lt;/div&gt;
 
-    </body>
-</html>
+    &lt;/body&gt;
+&lt;/html&gt;
 
-
+</code>
+</pre>
 
 
 
