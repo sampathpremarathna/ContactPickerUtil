@@ -15,9 +15,12 @@
     <!-- android -->
     <platform name="android">
         
-		<config-file target="res/xml/config.xml" parent="plugins">
-					<plugin  name="com.mobitel.nalaka.piccon.ContactPick" value="com.mobitel.nalaka.piccon.ContactPick" />
-        </config-file>
+		<config-file target="res/xml/config.xml" parent="/*">
+
+        	        <feature name="ContactPickerUtil">
+				<param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
+			</feature>
+             </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.READ_CONTACTS" />
