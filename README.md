@@ -16,7 +16,7 @@ Adobe PhoneGap Build
 Add the following to your config.xml
 <pre>
 <code>
-&lt;gap:plugin name="com.mobitel.nalaka.piccon.ContactPick" &gt;
+&lt;gap:plugin name="com.mobitel.nalaka.piccon" &gt;
 &lt;/gap:plugin &gt;
 </code>
 </pre>
