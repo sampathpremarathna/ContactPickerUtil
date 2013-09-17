@@ -20,6 +20,6 @@ var argscheck = require('cordova/argscheck'),
 window.contactPickerUtil = function(callback) {
     cordova.exec(callback, function(err) {
         console.log(err);
-    }, "ContactPick", "pick", []);
+    }, "ContactPickerUtil", "pick", []);
 };
 
