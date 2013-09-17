@@ -80,6 +80,20 @@ Manual Android Installation
 </code>
 </pre>
 
+Or you can just add the plugin script to your page yourself by adding following code on <b>deviceready</b> function.
+
+<pre>
+<code>
+
+    window.contactPickerUtil = function(callback) {
+    cordova.exec(callback, function(err) {
+        console.log(err);
+    }, "ContactPickerUtil", "pick", []);
+
+</code>
+</pre>
+
+
 USAGE
 =======
 
