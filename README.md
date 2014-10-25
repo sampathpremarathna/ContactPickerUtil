@@ -1,11 +1,11 @@
 ContactPickerUtil
 =================
 
-phonegap contact picker plugin
+PhoneGap contact picker plugin
 
 
-This plugin will help you to open native contact picker from your phonegap application and pick contacts name 
-and contact number.If the selected contact number have more than one contact it will asked your to pick one of them.
+This plugin will help you to open the native contact picker from your PhoneGap application, and pick a contact's name 
+and phone number. If the selected contact has multiple numbers, it will ask you to pick one of them.
 
 
 How to use:
@@ -21,7 +21,7 @@ Add the following to your config.xml
 </code>
 </pre>
 
-Add the javascript scripts included in the plugin into your index.html
+Add the included JavaScript into your index.html
 <pre>
 <code>
 &lt;script src="ContactPicker.js"/ &gt;
