@@ -14,21 +14,17 @@ Adobe PhoneGap Build
 =====================
 
 Add the following to your config.xml
-<pre>
-<code>
-&lt;gap:plugin name="com.mobitel.nalaka.piccon" &gt;
-&lt;/gap:plugin &gt;
-</code>
-</pre>
+
+```xml
+<gap:plugin name="com.mobitel.nalaka.piccon">
+</gap:plugin>
+```
 
 Add the javascript scripts included in the plugin into your index.html
-<pre>
-<code>
-&lt;script src="ContactPicker.js"/ &gt;
 
-</code>
-</pre>
-
+```html
+<script src="ContactPicker.js"/>
+```
 
 Manual Android Installation
 =============================
@@ -58,56 +54,46 @@ Manual Android Installation
 </pre>
 
 * and add the following to config.xml file
-<pre> 
- <code>
-    &lt;feature name="ContactPick" &gt;
-        &lt; param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" / &gt;
-    &lt;/feature &gt;
-</code>
-</pre>
+
+```xml
+<feature name="ContactPick">
+    <param name="android-package" value="com.mobitel.nalaka.piccon.ContactPick" />
+</feature>
+```
 
 * and add the following to permission to AndroidManifest.xml file
-<pre> 
- <code>
-    &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
-</code>
-</pre>
+
+```xml
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+```
     
 * link the ContactPicker.js to the html file
-<pre> 
- <code>
-  &lt;script src="ContactPicker.js" /&gt;
-</code>
-</pre>
+
+```html
+<script src="ContactPicker.js" />
+```
 
 Or you can just add the plugin script to your page yourself by adding following code on <b>deviceready</b> function.
 
-<pre>
-<code>
-
-    window.contactPickerUtil = function(callback) {
-    cordova.exec(callback, function(err) {
-        console.log(err);
-    }, "ContactPickerUtil", "pick", []);
-
-</code>
-</pre>
-
+```js
+window.contactPickerUtil = function(callback) {
+cordova.exec(callback, function(err) {
+    console.log(err);
+}, "ContactPickerUtil", "pick", []);
+```
 
 USAGE
 =======
 
 example :
-<code>
-<pre>
-
-&lt;html&gt;
-    &lt;head>
-        &lt;meta charset="utf-8" /&gt;
-        &lt;script type="text/javascript" src="cordova.js"/ &gt;
-        &lt;script type="text/javascript" src="ContactPicker.js"/ &gt;
+```html
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="cordova.js"/>
+        <script type="text/javascript" src="ContactPicker.js"/>
         
-        &lt;script type="text/javascript" &gt;
+        <script type="text/javascript">
            
             function pickAContact(){
                 window.contactPickerUtil(function(data) {
@@ -115,27 +101,19 @@ example :
                 });
             }
 
-        &lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
+        </script>
+    </head>
+    <body>
 
         
 
 
-    &lt;div &gt;
+    <div>
 
-        &lt; button type="button"  onclick="pickAContact()" &gt; Click To Pick &lt;/button&gt;
+        <button type="button"  onclick="pickAContact()"> Click To Pick </button>
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;/body&gt;
-&lt;/html&gt;
-
-</code>
-</pre>
-
-
-
-
-
-
+    </body>
+</html>
+```
