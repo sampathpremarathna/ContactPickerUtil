@@ -3,9 +3,9 @@ package com.mobitel.nalaka.piccon;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
-import org.apache.cordova.api.PluginResult;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
